@@ -9,3 +9,6 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
+
+# Default for one-container hosting (Railway); docker-compose.yml overrides it.
+CMD ["sh", "start.sh"]

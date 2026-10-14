@@ -36,6 +36,23 @@ python manage.py runworker          # the background jobs
 
 `seed_demo --reset` deletes everything and builds the demo data again.
 
+### Railway (one service)
+
+Railway services cannot share a SQLite volume, so run everything in **one** service: the `Dockerfile` default command is `start.sh` (migrate, worker, bot, web). Add a **Volume** mounted at `/data` and set these variables:
+
+| Variable | Value |
+| --- | --- |
+| `DJANGO_SECRET_KEY` | long random string |
+| `DEBUG` | `False` |
+| `DATA_DIR` | `/data` |
+| `ALLOWED_HOSTS` | your Railway domain, e.g. `xxx.up.railway.app` |
+| `CSRF_TRUSTED_ORIGINS` | `https://xxx.up.railway.app` |
+| `BOT_TOKEN` | from BotFather |
+| `OFFICE_GROUP_ID` | optional, for the daily digest |
+| `DJANGO_SUPERUSER_USERNAME` / `DJANGO_SUPERUSER_PASSWORD` | first office login |
+
+Keep the service at **one replica** (two bots polling the same token conflict).
+
 ### Telegram setup
 
 1. Talk to [@BotFather](https://t.me/BotFather), create a bot, put the token in `BOT_TOKEN`.

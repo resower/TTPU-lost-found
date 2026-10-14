@@ -1,0 +1,36 @@
+{% extends "base.html" %}{% load i18n %}
+{% block content %}
+<h1>{% trans "Dashboard" %}</h1>
+
+<div class="cards">
+  <div class="card"><b>{{ stats.in_storage }}</b>{% trans "Items in storage" %}</div>
+  <div class="card"><b>{{ stats.expiring }}</b>{% trans "Expiring within 7 days" %}</div>
+  <div class="card"><b>{{ stats.ready_for_disposal }}</b>{% trans "Ready for disposal" %}</div>
+  <div class="card"><b>{{ stats.open_lost }}</b>{% trans "Open lost reports" %}</div>
+  <div class="card"><b>{{ stats.pending_matches }}</b>{% trans "Pending match suggestions" %}</div>
+  <div class="card"><b>{{ stats.returned_month }}</b>{% trans "Items returned this month" %}</div>
+</div>
+
+<div class="charts">
+  <div class="panel"><h3>{% trans "Items in storage by category" %}</h3><canvas id="by-category-chart"></canvas></div>
+  <div class="panel"><h3>{% trans "Reports by location (top 10)" %}</h3><canvas id="by-location-chart"></canvas></div>
+</div>
+
+{{ by_category|json_script:"by-category" }}
+{{ by_location|json_script:"by-location" }}
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+<script>
+  function draw(canvasId, dataId) {
+    const data = JSON.parse(document.getElementById(dataId).textContent);
+    new Chart(document.getElementById(canvasId), {
+      type: "bar",
+      data: {labels: data.labels, datasets: [{data: data.values, backgroundColor: "#2563eb"}]},
+      options: {indexAxis: "y", plugins: {legend: {display: false}}},
+    });
+  }
+  if (window.Chart) {
+    draw("by-category-chart", "by-category");
+    draw("by-location-chart", "by-location");
+  }
+</script>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "base.html" %}{% load i18n %}
+{% block content %}
+<h1>{% trans "Return item" %}: {{ item.shelf_code }} · {{ item.title }}</h1>
+
+<form method="post" class="panel">{% csrf_token %}
+  {{ form.as_p }}
+  <p class="muted">{% trans "Only the last 4 digits of the ID are stored." %}</p>
+  <button class="primary">{% trans "Hand over" %}</button>
+  <a class="button" href="{% url 'storage_detail' item.pk %}">{% trans "Cancel" %}</a>
+</form>
+{% endblock %}

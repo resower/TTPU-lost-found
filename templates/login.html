@@ -1,0 +1,11 @@
+{% extends "base.html" %}{% load i18n %}
+{% block content %}
+<div class="panel" style="max-width: 380px; margin: 3rem auto;">
+  <h1>{% trans "Office login" %}</h1>
+  <form method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <input type="hidden" name="next" value="{{ next }}">
+    <button class="primary">{% trans "Log in" %}</button>
+  </form>
+</div>
+{% endblock %}

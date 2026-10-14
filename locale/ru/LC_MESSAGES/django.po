@@ -1,0 +1,553 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: lost-and-found\n"
+"Language-Team: Russian\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: templates/base.html:43
+msgid "Admin"
+msgstr "Админ"
+
+#: reports/forms.py:14 storage/forms.py:81
+msgid "All"
+msgstr "Все"
+
+#: reports/templates/reports/lost_detail.html:10
+msgid "Brand or marks"
+msgstr "Бренд или приметы"
+
+#: catalog/forms.py:11
+msgid "Building"
+msgstr "Здание"
+
+#: catalog/templates/catalog/reference.html:8
+msgid "Building / area"
+msgstr "Здание / место"
+
+#: catalog/templates/catalog/form.html:8
+#: storage/templates/storage/return.html:9
+msgid "Cancel"
+msgstr "Отмена"
+
+#: reports/models.py:53 reports/models.py:78
+msgid "Cancelled"
+msgstr "Отменено"
+
+#: catalog/templates/catalog/reference.html:23
+msgid "Categories"
+msgstr "Категории"
+
+#: reports/forms.py:17 reports/templates/reports/lost_detail.html:8
+#: reports/templates/reports/lost_list.html:12 storage/forms.py:24
+#: storage/forms.py:75 storage/templates/storage/detail.html:12
+#: storage/templates/storage/list.html:13
+#: storage/templates/storage/receive.html:14
+msgid "Category"
+msgstr "Категория"
+
+#: storage/templates/storage/detail.html:54
+msgid "Change"
+msgstr "Изменение"
+
+#: storage/templates/storage/receive.html:11
+msgid "Choose one to fill in the form from the finder's report."
+msgstr "Выберите сообщение, чтобы заполнить форму по данным нашедшего."
+
+#: reports/templates/reports/lost_detail.html:11 storage/forms.py:27
+#: storage/templates/storage/detail.html:14
+msgid "Color"
+msgstr "Цвет"
+
+#: reports/templates/reports/lost_detail.html:43
+msgid "Confirm"
+msgstr "Подтвердить"
+
+#: matching/models.py:19
+msgid "Confirmed"
+msgstr "Подтверждено"
+
+#: reports/templates/reports/lost_detail.html:22
+msgid "Created by"
+msgstr "Кто создал"
+
+#: storage/templates/storage/dashboard.html:3 templates/base.html:38
+msgid "Dashboard"
+msgstr "Панель"
+
+#: reports/templates/reports/lost_detail.html:9 storage/forms.py:26
+#: storage/templates/storage/detail.html:13
+msgid "Description"
+msgstr "Описание"
+
+#: storage/templates/storage/detail.html:32
+msgid "Dispose"
+msgstr "Утилизировать"
+
+#: storage/models.py:27
+msgid "Disposed"
+msgstr "Утилизировано"
+
+#: catalog/templates/catalog/reference.html:12
+#: catalog/templates/catalog/reference.html:17
+#: catalog/templates/catalog/reference.html:34
+msgid "Edit"
+msgstr "Изменить"
+
+#: catalog/views.py:46
+msgid "Edit category"
+msgstr "Изменить категорию"
+
+#: catalog/views.py:35
+msgid "Edit location"
+msgstr "Изменить место"
+
+#: catalog/forms.py:25
+msgid "Emoji"
+msgstr "Эмодзи"
+
+#: storage/forms.py:63
+msgid "Enter exactly 4 digits."
+msgstr "Введите ровно 4 цифры."
+
+#: reports/models.py:52
+msgid "Expired"
+msgstr "Истёк срок"
+
+#: storage/forms.py:89 storage/templates/storage/dashboard.html:7
+msgid "Expiring within 7 days"
+msgstr "Срок истекает в течение 7 дней"
+
+#: storage/templates/storage/list.html:8
+msgid "Export items in storage (CSV)"
+msgstr "Выгрузить вещи на хранении (CSV)"
+
+#: reports/templates/reports/lost_list.html:7
+#: storage/templates/storage/list.html:7
+msgid "Filter"
+msgstr "Фильтр"
+
+#: catalog/forms.py:11 catalog/templates/catalog/reference.html:8
+msgid "Floor"
+msgstr "Этаж"
+
+#: storage/templates/storage/receive.html:14
+msgid "Found"
+msgstr "Найдено"
+
+#: storage/templates/storage/detail.html:15
+msgid "Found at"
+msgstr "Где найдено"
+
+#: reports/templates/reports/lost_detail.html:21
+msgid "Found item"
+msgstr "Найденная вещь"
+
+#: storage/forms.py:23
+msgid "Found report (if the finder reported it in the bot)"
+msgstr "Сообщение о находке (если нашедший сообщил в боте)"
+
+#: storage/templates/storage/return.html:8
+msgid "Hand over"
+msgstr "Выдать"
+
+#: catalog/models.py:28
+msgid "How many days the office keeps an unclaimed item of this category."
+msgstr "Сколько дней офис хранит невостребованную вещь этой категории."
+
+#: storage/models.py:25
+msgid "In storage"
+msgstr "На хранении"
+
+#: reports/templates/reports/lost_list.html:12
+#: storage/templates/storage/list.html:13
+#: storage/templates/storage/receive.html:14
+msgid "Item"
+msgstr "Вещь"
+
+#: matching/forms.py:11
+msgid "Item on the shelf"
+msgstr "Вещь на полке"
+
+#: storage/views.py:120
+#, python-format
+msgid "Item saved on shelf %(code)s."
+msgstr "Вещь сохранена на полке %(code)s."
+
+#: storage/templates/storage/dashboard.html:6
+msgid "Items in storage"
+msgstr "Вещей на хранении"
+
+#: storage/templates/storage/dashboard.html:15
+msgid "Items in storage by category"
+msgstr "Вещи на хранении по категориям"
+
+#: storage/templates/storage/dashboard.html:11
+msgid "Items returned this month"
+msgstr "Возвращено в этом месяце"
+
+#: storage/templates/storage/detail.html:18
+#: storage/templates/storage/list.html:14
+msgid "Keep until"
+msgstr "Хранить до"
+
+#: storage/forms.py:62
+msgid "Last 4 digits of the ID"
+msgstr "Последние 4 цифры документа"
+
+#: catalog/templates/catalog/reference.html:5
+msgid "Locations"
+msgstr "Места"
+
+#: templates/login.html:8
+msgid "Log in"
+msgstr "Войти"
+
+#: templates/base.html:45
+msgid "Log out"
+msgstr "Выйти"
+
+#: templates/base.html:6
+msgid "Lost & Found"
+msgstr "Бюро находок"
+
+#: reports/templates/reports/lost_detail.html:12
+msgid "Lost at"
+msgstr "Где потеряно"
+
+#: reports/templates/reports/lost_list.html:13
+msgid "Lost on"
+msgstr "Дата потери"
+
+#: storage/templates/storage/detail.html:40
+msgid "Lost report"
+msgstr "Сообщение о потере"
+
+#: reports/templates/reports/lost_list.html:3 templates/base.html:41
+msgid "Lost reports"
+msgstr "Потерянные вещи"
+
+#: matching/views.py:17
+msgid "Match confirmed."
+msgstr "Совпадение подтверждено."
+
+#: matching/views.py:25
+msgid "Match rejected."
+msgstr "Совпадение отклонено."
+
+#: matching/views.py:40
+msgid "Match suggestion added."
+msgstr "Предложение добавлено."
+
+#: storage/templates/storage/detail.html:38
+msgid "Match suggestions"
+msgstr "Предложения совпадений"
+
+#: reports/models.py:50
+msgid "Matched"
+msgstr "Найдено совпадение"
+
+#: storage/forms.py:52
+msgid "Matched lost report"
+msgstr "Подходящее сообщение о потере"
+
+#: catalog/forms.py:11
+msgid "Name"
+msgstr "Название"
+
+#: catalog/templates/catalog/reference.html:24 catalog/views.py:40
+msgid "New category"
+msgstr "Новая категория"
+
+#: catalog/templates/catalog/reference.html:6 catalog/views.py:29
+msgid "New location"
+msgstr "Новое место"
+
+#: storage/templates/storage/receive.html:22
+msgid "No"
+msgstr "Нет"
+
+#: storage/templates/storage/list.html:30
+msgid "No items found."
+msgstr "Вещи не найдены."
+
+#: storage/templates/storage/receive.html:26
+msgid "No open found reports."
+msgstr "Нет открытых сообщений о находках."
+
+#: reports/templates/reports/lost_list.html:24
+msgid "No reports found."
+msgstr "Сообщения не найдены."
+
+#: reports/templates/reports/lost_detail.html:52
+#: storage/templates/storage/detail.html:48
+msgid "No suggestions yet."
+msgstr "Предложений пока нет."
+
+#: storage/forms.py:65 storage/forms.py:69
+#: storage/templates/storage/detail.html:54
+#: storage/templates/storage/detail.html:31
+msgid "Note"
+msgstr "Примечание"
+
+#: templates/login.html:4
+msgid "Office login"
+msgstr "Вход для сотрудников"
+
+#: storage/templates/storage/return.html:7
+msgid "Only the last 4 digits of the ID are stored."
+msgstr "Сохраняются только последние 4 цифры документа."
+
+#: reports/models.py:49 reports/models.py:75
+msgid "Open"
+msgstr "Открыто"
+
+#: storage/templates/storage/receive.html:10
+msgid "Open found reports"
+msgstr "Открытые сообщения о находках"
+
+#: storage/templates/storage/dashboard.html:9
+msgid "Open lost reports"
+msgstr "Открытые сообщения о потерях"
+
+#: matching/models.py:15
+msgid "Owner"
+msgstr "Владелец"
+
+#: storage/templates/storage/dashboard.html:10
+msgid "Pending match suggestions"
+msgstr "Предложения, ожидающие проверки"
+
+#: storage/forms.py:28
+msgid "Photo"
+msgstr "Фото"
+
+#: reports/templates/reports/lost_detail.html:57
+msgid "Pick an item by hand"
+msgstr "Выбрать вещь вручную"
+
+#: storage/templates/storage/dashboard.html:8
+msgid "Ready for disposal"
+msgstr "Готово к утилизации"
+
+#: storage/templates/storage/receive.html:3 templates/base.html:39
+msgid "Receive item"
+msgstr "Принять вещь"
+
+#: storage/templates/storage/detail.html:16
+#: storage/templates/storage/list.html:14
+msgid "Received"
+msgstr "Принято"
+
+#: storage/forms.py:84
+msgid "Received from"
+msgstr "Принято с"
+
+#: storage/forms.py:87
+msgid "Received to"
+msgstr "Принято по"
+
+#: storage/forms.py:57
+msgid "Receiver name"
+msgstr "Имя получателя"
+
+#: catalog/templates/catalog/reference.html:3 templates/base.html:42
+msgid "Reference data"
+msgstr "Справочники"
+
+#: reports/models.py:76
+msgid "Registered"
+msgstr "Зарегистрировано"
+
+#: reports/templates/reports/lost_detail.html:46
+msgid "Reject"
+msgstr "Отклонить"
+
+#: matching/models.py:20
+msgid "Rejected"
+msgstr "Отклонено"
+
+#: reports/templates/reports/lost_detail.html:13
+#: reports/templates/reports/lost_list.html:12
+msgid "Reporter"
+msgstr "Заявитель"
+
+#: storage/templates/storage/dashboard.html:16
+msgid "Reports by location (top 10)"
+msgstr "Сообщения по местам (топ-10)"
+
+#: catalog/forms.py:29 catalog/templates/catalog/reference.html:28
+msgid "Retention (days)"
+msgstr "Срок хранения (дней)"
+
+#: storage/templates/storage/return.html:3
+msgid "Return item"
+msgstr "Вернуть вещь"
+
+#: storage/templates/storage/detail.html:29
+msgid "Return to owner"
+msgstr "Вернуть владельцу"
+
+#: reports/models.py:51 reports/models.py:77 storage/models.py:26
+msgid "Returned"
+msgstr "Возвращено"
+
+#: catalog/templates/catalog/form.html:7
+msgid "Save"
+msgstr "Сохранить"
+
+#: storage/templates/storage/receive.html:7
+msgid "Save item"
+msgstr "Сохранить вещь"
+
+#: reports/templates/reports/lost_detail.html:21
+#: storage/templates/storage/detail.html:40
+msgid "Score"
+msgstr "Баллы"
+
+#: reports/forms.py:10 storage/forms.py:73
+msgid "Search"
+msgstr "Поиск"
+
+#: storage/forms.py:77 storage/templates/storage/list.html:13
+msgid "Shelf"
+msgstr "Полка"
+
+#: storage/forms.py:29
+msgid "Shelf code"
+msgstr "Код полки"
+
+#: matching/models.py:14 storage/templates/storage/detail.html:54
+msgid "Staff"
+msgstr "Сотрудник"
+
+#: reports/forms.py:13 reports/templates/reports/lost_detail.html:14
+#: reports/templates/reports/lost_detail.html:22
+#: reports/templates/reports/lost_list.html:13 storage/forms.py:80
+#: storage/templates/storage/detail.html:25
+#: storage/templates/storage/detail.html:40
+#: storage/templates/storage/list.html:14
+msgid "Status"
+msgstr "Статус"
+
+#: storage/templates/storage/detail.html:52
+msgid "Status history"
+msgstr "История статусов"
+
+#: storage/views.py:174
+msgid "Status updated."
+msgstr "Статус обновлён."
+
+#: storage/templates/storage/receive.html:15
+msgid "Still with the finder"
+msgstr "Пока у нашедшего"
+
+#: storage/templates/storage/list.html:3 templates/base.html:40
+msgid "Storage"
+msgstr "Хранение"
+
+#: reports/templates/reports/lost_detail.html:59
+msgid "Suggest this item"
+msgstr "Предложить эту вещь"
+
+#: matching/models.py:18
+msgid "Suggested"
+msgstr "Предложено"
+
+#: reports/templates/reports/lost_detail.html:18
+msgid "Suggested matches"
+msgstr "Предложенные совпадения"
+
+#: matching/models.py:13
+msgid "System"
+msgstr "Система"
+
+#: storage/views.py:153
+msgid "The item was handed over."
+msgstr "Вещь выдана."
+
+#: config/forms.py:12
+msgid "This account is not office staff."
+msgstr "Эта учётная запись не принадлежит сотруднику офиса."
+
+#: matching/views.py:42
+msgid "This item is already suggested for this report."
+msgstr "Эта вещь уже предложена для этого сообщения."
+
+#: storage/forms.py:45
+msgid "This shelf code is already used by another item."
+msgstr "Этот код полки уже занят другой вещью."
+
+#: storage/forms.py:25
+msgid "Title"
+msgstr "Название"
+
+#: storage/templates/storage/detail.html:33
+msgid "Transfer"
+msgstr "Передать"
+
+#: storage/models.py:28
+msgid "Transferred"
+msgstr "Передано"
+
+#: storage/templates/storage/receive.html:23
+msgid "Use this report"
+msgstr "Использовать это сообщение"
+
+#: storage/templates/storage/detail.html:54
+msgid "When"
+msgstr "Когда"
+
+#: reports/templates/reports/lost_detail.html:21
+msgid "Why"
+msgstr "Почему"
+
+#: storage/templates/storage/receive.html:22
+msgid "Yes"
+msgstr "Да"
+
+#: matching/scoring.py:24
+msgid "area"
+msgstr "место"
+
+#: matching/scoring.py:23
+msgid "building"
+msgstr "здание"
+
+#: matching/scoring.py:21
+msgid "color"
+msgstr "цвет"
+
+#: matching/scoring.py:22
+msgid "date"
+msgstr "дата"
+
+#: storage/templates/storage/detail.html:22
+#: storage/templates/storage/list.html:25
+msgid "expiring soon"
+msgstr "срок скоро истекает"
+
+#: reports/templates/reports/lost_detail.html:30
+msgid "kept by the finder"
+msgstr "у нашедшего"
+
+#: reports/templates/reports/lost_detail.html:38
+msgid "owner says: mine"
+msgstr "владелец: моё"
+
+#: storage/templates/storage/detail.html:21
+#: storage/templates/storage/list.html:24
+msgid "ready for disposal"
+msgstr "готово к утилизации"
+
+#: matching/scoring.py:25
+msgid "words"
+msgstr "слова"
+
+#: catalog/forms.py:17
+msgid "— this is a building —"
+msgstr "— это здание —"

@@ -1,0 +1,54 @@
+{% load i18n %}<!doctype html>
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}{% trans "Lost & Found" %}{% endblock %}</title>
+<style>
+  body { font-family: system-ui, sans-serif; margin: 0; background: #f6f7f9; color: #1d2330; }
+  nav { background: #1d2330; padding: .6rem 1rem; display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+  nav a, nav button { color: #fff; text-decoration: none; background: none; border: 0; font: inherit; cursor: pointer; }
+  nav form { margin-left: auto; }
+  main { max-width: 1000px; margin: 1.5rem auto; padding: 0 1rem; }
+  h1 { margin-top: 0; }
+  table { border-collapse: collapse; width: 100%; background: #fff; margin-bottom: 1rem; }
+  th, td { text-align: left; padding: .45rem .6rem; border-bottom: 1px solid #e3e6eb; vertical-align: top; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: .8rem; margin-bottom: 1.5rem; }
+  .card { background: #fff; padding: .8rem 1rem; border-radius: 8px; }
+  .card b { display: block; font-size: 1.8rem; }
+  .charts { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1rem; }
+  .panel { background: #fff; padding: 1rem; border-radius: 8px; margin-bottom: 1rem; }
+  .msg { padding: .6rem 1rem; border-radius: 6px; background: #e6f4ea; }
+  .msg.error { background: #fde8e8; }
+  .badge { padding: 0 .4rem; border-radius: 4px; background: #e3e6eb; font-size: .85rem; }
+  .badge.warn { background: #fff0c2; }
+  .badge.bad { background: #fbd0d0; }
+  form.inline { display: inline; }
+  input, select, textarea { padding: .35rem; max-width: 100%; }
+  button, a.button { background: #e3e6eb; color: #1d2330; border: 0; padding: .4rem .8rem; border-radius: 6px; text-decoration: none; cursor: pointer; font: inherit; display: inline-block; }
+  button.primary, a.button.primary { background: #2563eb; color: #fff; }
+  .errorlist { color: #b00020; margin: 0; padding-left: 1rem; }
+  .muted { color: #667085; }
+  img.photo { max-width: 260px; border-radius: 8px; }
+</style>
+</head>
+<body>
+{% if user.is_authenticated %}
+<nav>
+  <a href="{% url 'dashboard' %}">{% trans "Dashboard" %}</a>
+  <a href="{% url 'receive_item' %}">{% trans "Receive item" %}</a>
+  <a href="{% url 'storage_list' %}">{% trans "Storage" %}</a>
+  <a href="{% url 'lost_list' %}">{% trans "Lost reports" %}</a>
+  <a href="{% url 'reference' %}">{% trans "Reference data" %}</a>
+  <a href="{% url 'admin:index' %}">{% trans "Admin" %}</a>
+  <form method="post" action="{% url 'logout' %}">{% csrf_token %}
+    <button>{% trans "Log out" %} ({{ user.username }})</button>
+  </form>
+</nav>
+{% endif %}
+<main>
+  {% for message in messages %}<p class="msg {{ message.tags }}">{{ message }}</p>{% endfor %}
+  {% block content %}{% endblock %}
+</main>
+</body>
+</html>

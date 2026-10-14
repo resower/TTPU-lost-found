@@ -1,0 +1,38 @@
+{% extends "base.html" %}{% load i18n %}
+{% block content %}
+<h1>{% trans "Reference data" %}</h1>
+
+<h2>{% trans "Locations" %}</h2>
+<p><a class="button primary" href="{% url 'location_new' %}">{% trans "New location" %}</a></p>
+<table>
+  <tr><th>{% trans "Building / area" %}</th><th>{% trans "Floor" %}</th><th></th></tr>
+  {% for building in buildings %}
+  <tr>
+    <td><strong>{{ building.name }}</strong></td><td>{{ building.floor }}</td>
+    <td><a href="{% url 'location_edit' building.pk %}">{% trans "Edit" %}</a></td>
+  </tr>
+  {% for area in building.areas.all %}
+  <tr>
+    <td>&nbsp;&nbsp;&nbsp;{{ area.name }}</td><td>{{ area.floor }}</td>
+    <td><a href="{% url 'location_edit' area.pk %}">{% trans "Edit" %}</a></td>
+  </tr>
+  {% endfor %}
+  {% endfor %}
+</table>
+
+<h2>{% trans "Categories" %}</h2>
+<p><a class="button primary" href="{% url 'category_new' %}">{% trans "New category" %}</a></p>
+<table>
+  <tr>
+    <th></th><th>O'zbekcha</th><th>Русский</th><th>English</th>
+    <th>{% trans "Retention (days)" %}</th><th></th>
+  </tr>
+  {% for category in categories %}
+  <tr>
+    <td>{{ category.emoji }}</td><td>{{ category.name_uz }}</td><td>{{ category.name_ru }}</td>
+    <td>{{ category.name_en }}</td><td>{{ category.retention_days }}</td>
+    <td><a href="{% url 'category_edit' category.pk %}">{% trans "Edit" %}</a></td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

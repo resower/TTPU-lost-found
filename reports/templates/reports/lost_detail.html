@@ -1,0 +1,61 @@
+{% extends "base.html" %}{% load i18n %}
+{% block content %}
+<h1>{{ report.title }}</h1>
+
+<div class="panel">
+  {% if report.photo_file_id %}<img class="photo" src="{% url 'tg_photo' report.photo_file_id %}" alt="">{% endif %}
+  <table>
+    <tr><th>{% trans "Category" %}</th><td>{{ report.category.emoji }} {{ report.category }}</td></tr>
+    <tr><th>{% trans "Description" %}</th><td>{{ report.description }}</td></tr>
+    <tr><th>{% trans "Brand or marks" %}</th><td>{{ report.marks|default:"—" }}</td></tr>
+    <tr><th>{% trans "Color" %}</th><td>{{ report.color }}</td></tr>
+    <tr><th>{% trans "Lost at" %}</th><td>{{ report.location|default:"—" }}, {{ report.date_lost|date:"d.m.Y" }}</td></tr>
+    <tr><th>{% trans "Reporter" %}</th><td>{{ report.reporter }}{% if report.reporter.username %} (@{{ report.reporter.username }}){% endif %}</td></tr>
+    <tr><th>{% trans "Status" %}</th><td>{{ report.get_status_display }}</td></tr>
+  </table>
+</div>
+
+<h2>{% trans "Suggested matches" %}</h2>
+<table>
+  <tr>
+    <th>{% trans "Found item" %}</th><th>{% trans "Score" %}</th><th>{% trans "Why" %}</th>
+    <th>{% trans "Created by" %}</th><th>{% trans "Status" %}</th><th></th>
+  </tr>
+  {% for s in suggestions %}
+  <tr>
+    <td>
+      {% if s.stored_item %}
+        <a href="{% url 'storage_detail' s.stored_item.pk %}">{{ s.stored_item }}</a>
+      {% else %}
+        {{ s.found_report.title }} ({% trans "kept by the finder" %})
+      {% endif %}
+    </td>
+    <td>{{ s.score }}</td>
+    <td>{% for label, points in s.explanation %}{{ label }} +{{ points }}{% if not forloop.last %}, {% endif %}{% endfor %}</td>
+    <td>{{ s.get_created_by_display }}</td>
+    <td>
+      {{ s.get_status_display }}
+      {% if s.reporter_answer == "yes" %}<span class="badge warn">{% trans "owner says: mine" %}</span>{% endif %}
+    </td>
+    <td>
+      {% if s.status == "suggested" %}
+        <form method="post" action="{% url 'match_confirm' s.pk %}" class="inline">{% csrf_token %}
+          <button class="primary">{% trans "Confirm" %}</button>
+        </form>
+        <form method="post" action="{% url 'match_reject' s.pk %}" class="inline">{% csrf_token %}
+          <button>{% trans "Reject" %}</button>
+        </form>
+      {% endif %}
+    </td>
+  </tr>
+  {% empty %}
+  <tr><td colspan="6">{% trans "No suggestions yet." %}</td></tr>
+  {% endfor %}
+</table>
+
+<form method="post" action="{% url 'match_pick' report.pk %}" class="panel">{% csrf_token %}
+  <h3>{% trans "Pick an item by hand" %}</h3>
+  {{ pick_form.as_p }}
+  <button>{% trans "Suggest this item" %}</button>
+</form>
+{% endblock %}

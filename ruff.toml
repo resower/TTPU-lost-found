@@ -1,0 +1,10 @@
+line-length = 100
+target-version = "py312"
+extend-exclude = ["migrations"]
+
+[lint]
+select = ["E", "F", "I", "B", "UP"]
+
+[lint.per-file-ignores]
+# The demo data is a table of long lines.
+"catalog/management/commands/seed_demo.py" = ["E501"]

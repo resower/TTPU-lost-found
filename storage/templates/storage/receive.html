@@ -1,0 +1,29 @@
+{% extends "base.html" %}{% load i18n %}
+{% block content %}
+<h1>{% trans "Receive item" %}</h1>
+
+<form method="post" enctype="multipart/form-data" class="panel">{% csrf_token %}
+  {{ form.as_p }}
+  <button class="primary">{% trans "Save item" %}</button>
+</form>
+
+<h2>{% trans "Open found reports" %}</h2>
+<p class="muted">{% trans "Choose one to fill in the form from the finder's report." %}</p>
+<table>
+  <tr>
+    <th>{% trans "Item" %}</th><th>{% trans "Category" %}</th><th>{% trans "Found" %}</th>
+    <th>{% trans "Still with the finder" %}</th><th></th>
+  </tr>
+  {% for report in open_reports %}
+  <tr>
+    <td>{{ report.title }}</td>
+    <td>{{ report.category.emoji }} {{ report.category }}</td>
+    <td>{{ report.date_found|date:"d.m.Y" }}</td>
+    <td>{% if report.kept_by_finder %}{% trans "Yes" %}{% else %}{% trans "No" %}{% endif %}</td>
+    <td><a href="?found={{ report.pk }}">{% trans "Use this report" %}</a></td>
+  </tr>
+  {% empty %}
+  <tr><td colspan="5">{% trans "No open found reports." %}</td></tr>
+  {% endfor %}
+</table>
+{% endblock %}

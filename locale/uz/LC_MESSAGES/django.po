@@ -1,0 +1,554 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: lost-and-found\n"
+"Language-Team: Uzbek\n"
+"Language: uz\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: templates/base.html:43
+msgid "Admin"
+msgstr "Admin"
+
+#: reports/forms.py:14 storage/forms.py:81
+msgid "All"
+msgstr "Hammasi"
+
+#: reports/templates/reports/lost_detail.html:10
+msgid "Brand or marks"
+msgstr "Brend yoki belgilar"
+
+#: catalog/forms.py:11
+msgid "Building"
+msgstr "Bino"
+
+#: catalog/templates/catalog/reference.html:8
+msgid "Building / area"
+msgstr "Bino / joy"
+
+#: catalog/templates/catalog/form.html:8
+#: storage/templates/storage/return.html:9
+msgid "Cancel"
+msgstr "Bekor qilish"
+
+#: reports/models.py:53 reports/models.py:78
+msgid "Cancelled"
+msgstr "Bekor qilingan"
+
+#: catalog/templates/catalog/reference.html:23
+msgid "Categories"
+msgstr "Kategoriyalar"
+
+#: reports/forms.py:17 reports/templates/reports/lost_detail.html:8
+#: reports/templates/reports/lost_list.html:12 storage/forms.py:24
+#: storage/forms.py:75 storage/templates/storage/detail.html:12
+#: storage/templates/storage/list.html:13
+#: storage/templates/storage/receive.html:14
+msgid "Category"
+msgstr "Kategoriya"
+
+#: storage/templates/storage/detail.html:54
+msgid "Change"
+msgstr "O'zgarish"
+
+#: storage/templates/storage/receive.html:11
+msgid "Choose one to fill in the form from the finder's report."
+msgstr "Topuvchining xabari asosida formani to'ldirish uchun birini tanlang."
+
+#: reports/templates/reports/lost_detail.html:11 storage/forms.py:27
+#: storage/templates/storage/detail.html:14
+msgid "Color"
+msgstr "Rang"
+
+#: reports/templates/reports/lost_detail.html:43
+msgid "Confirm"
+msgstr "Tasdiqlash"
+
+#: matching/models.py:19
+msgid "Confirmed"
+msgstr "Tasdiqlangan"
+
+#: reports/templates/reports/lost_detail.html:22
+msgid "Created by"
+msgstr "Kim yaratdi"
+
+#: storage/templates/storage/dashboard.html:3 templates/base.html:38
+msgid "Dashboard"
+msgstr "Boshqaruv paneli"
+
+#: reports/templates/reports/lost_detail.html:9 storage/forms.py:26
+#: storage/templates/storage/detail.html:13
+msgid "Description"
+msgstr "Tavsif"
+
+#: storage/templates/storage/detail.html:32
+msgid "Dispose"
+msgstr "Utilizatsiya qilish"
+
+#: storage/models.py:27
+msgid "Disposed"
+msgstr "Utilizatsiya qilingan"
+
+#: catalog/templates/catalog/reference.html:12
+#: catalog/templates/catalog/reference.html:17
+#: catalog/templates/catalog/reference.html:34
+msgid "Edit"
+msgstr "Tahrirlash"
+
+#: catalog/views.py:46
+msgid "Edit category"
+msgstr "Kategoriyani tahrirlash"
+
+#: catalog/views.py:35
+msgid "Edit location"
+msgstr "Joyni tahrirlash"
+
+#: catalog/forms.py:25
+msgid "Emoji"
+msgstr "Emoji"
+
+#: storage/forms.py:63
+msgid "Enter exactly 4 digits."
+msgstr "Aniq 4 ta raqam kiriting."
+
+#: reports/models.py:52
+msgid "Expired"
+msgstr "Muddati o'tgan"
+
+#: storage/forms.py:89 storage/templates/storage/dashboard.html:7
+msgid "Expiring within 7 days"
+msgstr "7 kun ichida muddati tugaydi"
+
+#: storage/templates/storage/list.html:8
+msgid "Export items in storage (CSV)"
+msgstr "Omborxonadagi buyumlarni yuklab olish (CSV)"
+
+#: reports/templates/reports/lost_list.html:7
+#: storage/templates/storage/list.html:7
+msgid "Filter"
+msgstr "Filtr"
+
+#: catalog/forms.py:11 catalog/templates/catalog/reference.html:8
+msgid "Floor"
+msgstr "Qavat"
+
+#: storage/templates/storage/receive.html:14
+msgid "Found"
+msgstr "Topilgan"
+
+#: storage/templates/storage/detail.html:15
+msgid "Found at"
+msgstr "Topilgan joy"
+
+#: reports/templates/reports/lost_detail.html:21
+msgid "Found item"
+msgstr "Topilgan buyum"
+
+#: storage/forms.py:23
+msgid "Found report (if the finder reported it in the bot)"
+msgstr "Topilma haqida xabar (topuvchi botda xabar bergan bo'lsa)"
+
+#: storage/templates/storage/return.html:8
+msgid "Hand over"
+msgstr "Topshirish"
+
+#: catalog/models.py:28
+msgid "How many days the office keeps an unclaimed item of this category."
+msgstr ""
+"Ofis egasi topilmagan buyumni shu kategoriya bo'yicha necha kun saqlaydi."
+
+#: storage/models.py:25
+msgid "In storage"
+msgstr "Omborda"
+
+#: reports/templates/reports/lost_list.html:12
+#: storage/templates/storage/list.html:13
+#: storage/templates/storage/receive.html:14
+msgid "Item"
+msgstr "Buyum"
+
+#: matching/forms.py:11
+msgid "Item on the shelf"
+msgstr "Javondagi buyum"
+
+#: storage/views.py:120
+#, python-format
+msgid "Item saved on shelf %(code)s."
+msgstr "Buyum %(code)s javoniga saqlandi."
+
+#: storage/templates/storage/dashboard.html:6
+msgid "Items in storage"
+msgstr "Omborxonadagi buyumlar"
+
+#: storage/templates/storage/dashboard.html:15
+msgid "Items in storage by category"
+msgstr "Omborxonadagi buyumlar (kategoriya bo'yicha)"
+
+#: storage/templates/storage/dashboard.html:11
+msgid "Items returned this month"
+msgstr "Shu oyda qaytarilgan buyumlar"
+
+#: storage/templates/storage/detail.html:18
+#: storage/templates/storage/list.html:14
+msgid "Keep until"
+msgstr "Saqlash muddati"
+
+#: storage/forms.py:62
+msgid "Last 4 digits of the ID"
+msgstr "Hujjatning oxirgi 4 ta raqami"
+
+#: catalog/templates/catalog/reference.html:5
+msgid "Locations"
+msgstr "Joylar"
+
+#: templates/login.html:8
+msgid "Log in"
+msgstr "Kirish"
+
+#: templates/base.html:45
+msgid "Log out"
+msgstr "Chiqish"
+
+#: templates/base.html:6
+msgid "Lost & Found"
+msgstr "Yo'qolgan va topilgan buyumlar"
+
+#: reports/templates/reports/lost_detail.html:12
+msgid "Lost at"
+msgstr "Yo'qolgan joy"
+
+#: reports/templates/reports/lost_list.html:13
+msgid "Lost on"
+msgstr "Yo'qolgan sana"
+
+#: storage/templates/storage/detail.html:40
+msgid "Lost report"
+msgstr "Yo'qotish haqida xabar"
+
+#: reports/templates/reports/lost_list.html:3 templates/base.html:41
+msgid "Lost reports"
+msgstr "Yo'qolgan buyumlar"
+
+#: matching/views.py:17
+msgid "Match confirmed."
+msgstr "Moslik tasdiqlandi."
+
+#: matching/views.py:25
+msgid "Match rejected."
+msgstr "Moslik rad etildi."
+
+#: matching/views.py:40
+msgid "Match suggestion added."
+msgstr "Moslik taklifi qo'shildi."
+
+#: storage/templates/storage/detail.html:38
+msgid "Match suggestions"
+msgstr "Moslik takliflari"
+
+#: reports/models.py:50
+msgid "Matched"
+msgstr "Mos topilgan"
+
+#: storage/forms.py:52
+msgid "Matched lost report"
+msgstr "Mos yo'qotish xabari"
+
+#: catalog/forms.py:11
+msgid "Name"
+msgstr "Nomi"
+
+#: catalog/templates/catalog/reference.html:24 catalog/views.py:40
+msgid "New category"
+msgstr "Yangi kategoriya"
+
+#: catalog/templates/catalog/reference.html:6 catalog/views.py:29
+msgid "New location"
+msgstr "Yangi joy"
+
+#: storage/templates/storage/receive.html:22
+msgid "No"
+msgstr "Yo'q"
+
+#: storage/templates/storage/list.html:30
+msgid "No items found."
+msgstr "Buyumlar topilmadi."
+
+#: storage/templates/storage/receive.html:26
+msgid "No open found reports."
+msgstr "Ochiq topilma xabarlari yo'q."
+
+#: reports/templates/reports/lost_list.html:24
+msgid "No reports found."
+msgstr "Xabarlar topilmadi."
+
+#: reports/templates/reports/lost_detail.html:52
+#: storage/templates/storage/detail.html:48
+msgid "No suggestions yet."
+msgstr "Hozircha takliflar yo'q."
+
+#: storage/forms.py:65 storage/forms.py:69
+#: storage/templates/storage/detail.html:54
+#: storage/templates/storage/detail.html:31
+msgid "Note"
+msgstr "Izoh"
+
+#: templates/login.html:4
+msgid "Office login"
+msgstr "Ofis xodimlari uchun kirish"
+
+#: storage/templates/storage/return.html:7
+msgid "Only the last 4 digits of the ID are stored."
+msgstr "Hujjatning faqat oxirgi 4 ta raqami saqlanadi."
+
+#: reports/models.py:49 reports/models.py:75
+msgid "Open"
+msgstr "Ochiq"
+
+#: storage/templates/storage/receive.html:10
+msgid "Open found reports"
+msgstr "Ochiq topilma xabarlari"
+
+#: storage/templates/storage/dashboard.html:9
+msgid "Open lost reports"
+msgstr "Ochiq yo'qotish xabarlari"
+
+#: matching/models.py:15
+msgid "Owner"
+msgstr "Egasi"
+
+#: storage/templates/storage/dashboard.html:10
+msgid "Pending match suggestions"
+msgstr "Ko'rib chiqilmagan moslik takliflari"
+
+#: storage/forms.py:28
+msgid "Photo"
+msgstr "Rasm"
+
+#: reports/templates/reports/lost_detail.html:57
+msgid "Pick an item by hand"
+msgstr "Buyumni qo'lda tanlash"
+
+#: storage/templates/storage/dashboard.html:8
+msgid "Ready for disposal"
+msgstr "Utilizatsiyaga tayyor"
+
+#: storage/templates/storage/receive.html:3 templates/base.html:39
+msgid "Receive item"
+msgstr "Buyumni qabul qilish"
+
+#: storage/templates/storage/detail.html:16
+#: storage/templates/storage/list.html:14
+msgid "Received"
+msgstr "Qabul qilingan"
+
+#: storage/forms.py:84
+msgid "Received from"
+msgstr "Qabul sanasi (dan)"
+
+#: storage/forms.py:87
+msgid "Received to"
+msgstr "Qabul sanasi (gacha)"
+
+#: storage/forms.py:57
+msgid "Receiver name"
+msgstr "Qabul qiluvchining ismi"
+
+#: catalog/templates/catalog/reference.html:3 templates/base.html:42
+msgid "Reference data"
+msgstr "Ma'lumotnomalar"
+
+#: reports/models.py:76
+msgid "Registered"
+msgstr "Ro'yxatga olingan"
+
+#: reports/templates/reports/lost_detail.html:46
+msgid "Reject"
+msgstr "Rad etish"
+
+#: matching/models.py:20
+msgid "Rejected"
+msgstr "Rad etilgan"
+
+#: reports/templates/reports/lost_detail.html:13
+#: reports/templates/reports/lost_list.html:12
+msgid "Reporter"
+msgstr "Xabar bergan"
+
+#: storage/templates/storage/dashboard.html:16
+msgid "Reports by location (top 10)"
+msgstr "Joylar bo'yicha xabarlar (eng ko'p 10 ta)"
+
+#: catalog/forms.py:29 catalog/templates/catalog/reference.html:28
+msgid "Retention (days)"
+msgstr "Saqlash muddati (kun)"
+
+#: storage/templates/storage/return.html:3
+msgid "Return item"
+msgstr "Buyumni qaytarish"
+
+#: storage/templates/storage/detail.html:29
+msgid "Return to owner"
+msgstr "Egasiga qaytarish"
+
+#: reports/models.py:51 reports/models.py:77 storage/models.py:26
+msgid "Returned"
+msgstr "Qaytarilgan"
+
+#: catalog/templates/catalog/form.html:7
+msgid "Save"
+msgstr "Saqlash"
+
+#: storage/templates/storage/receive.html:7
+msgid "Save item"
+msgstr "Buyumni saqlash"
+
+#: reports/templates/reports/lost_detail.html:21
+#: storage/templates/storage/detail.html:40
+msgid "Score"
+msgstr "Ball"
+
+#: reports/forms.py:10 storage/forms.py:73
+msgid "Search"
+msgstr "Qidirish"
+
+#: storage/forms.py:77 storage/templates/storage/list.html:13
+msgid "Shelf"
+msgstr "Javon"
+
+#: storage/forms.py:29
+msgid "Shelf code"
+msgstr "Javon kodi"
+
+#: matching/models.py:14 storage/templates/storage/detail.html:54
+msgid "Staff"
+msgstr "Xodim"
+
+#: reports/forms.py:13 reports/templates/reports/lost_detail.html:14
+#: reports/templates/reports/lost_detail.html:22
+#: reports/templates/reports/lost_list.html:13 storage/forms.py:80
+#: storage/templates/storage/detail.html:25
+#: storage/templates/storage/detail.html:40
+#: storage/templates/storage/list.html:14
+msgid "Status"
+msgstr "Holati"
+
+#: storage/templates/storage/detail.html:52
+msgid "Status history"
+msgstr "Holatlar tarixi"
+
+#: storage/views.py:174
+msgid "Status updated."
+msgstr "Holat yangilandi."
+
+#: storage/templates/storage/receive.html:15
+msgid "Still with the finder"
+msgstr "Hali topuvchida"
+
+#: storage/templates/storage/list.html:3 templates/base.html:40
+msgid "Storage"
+msgstr "Omborxona"
+
+#: reports/templates/reports/lost_detail.html:59
+msgid "Suggest this item"
+msgstr "Shu buyumni taklif qilish"
+
+#: matching/models.py:18
+msgid "Suggested"
+msgstr "Taklif qilingan"
+
+#: reports/templates/reports/lost_detail.html:18
+msgid "Suggested matches"
+msgstr "Taklif qilingan moslikdagilar"
+
+#: matching/models.py:13
+msgid "System"
+msgstr "Tizim"
+
+#: storage/views.py:153
+msgid "The item was handed over."
+msgstr "Buyum topshirildi."
+
+#: config/forms.py:12
+msgid "This account is not office staff."
+msgstr "Bu hisob ofis xodimiga tegishli emas."
+
+#: matching/views.py:42
+msgid "This item is already suggested for this report."
+msgstr "Bu buyum ushbu xabar uchun allaqachon taklif qilingan."
+
+#: storage/forms.py:45
+msgid "This shelf code is already used by another item."
+msgstr "Bu javon kodi boshqa buyumda ishlatilgan."
+
+#: storage/forms.py:25
+msgid "Title"
+msgstr "Nomi"
+
+#: storage/templates/storage/detail.html:33
+msgid "Transfer"
+msgstr "Boshqa joyga o'tkazish"
+
+#: storage/models.py:28
+msgid "Transferred"
+msgstr "O'tkazilgan"
+
+#: storage/templates/storage/receive.html:23
+msgid "Use this report"
+msgstr "Shu xabardan foydalanish"
+
+#: storage/templates/storage/detail.html:54
+msgid "When"
+msgstr "Qachon"
+
+#: reports/templates/reports/lost_detail.html:21
+msgid "Why"
+msgstr "Sababi"
+
+#: storage/templates/storage/receive.html:22
+msgid "Yes"
+msgstr "Ha"
+
+#: matching/scoring.py:24
+msgid "area"
+msgstr "joy"
+
+#: matching/scoring.py:23
+msgid "building"
+msgstr "bino"
+
+#: matching/scoring.py:21
+msgid "color"
+msgstr "rang"
+
+#: matching/scoring.py:22
+msgid "date"
+msgstr "sana"
+
+#: storage/templates/storage/detail.html:22
+#: storage/templates/storage/list.html:25
+msgid "expiring soon"
+msgstr "muddati tugayapti"
+
+#: reports/templates/reports/lost_detail.html:30
+msgid "kept by the finder"
+msgstr "topuvchida"
+
+#: reports/templates/reports/lost_detail.html:38
+msgid "owner says: mine"
+msgstr "egasi: meniki"
+
+#: storage/templates/storage/detail.html:21
+#: storage/templates/storage/list.html:24
+msgid "ready for disposal"
+msgstr "utilizatsiyaga tayyor"
+
+#: matching/scoring.py:25
+msgid "words"
+msgstr "so'zlar"
+
+#: catalog/forms.py:17
+msgid "— this is a building —"
+msgstr "— bu bino —"

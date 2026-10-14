@@ -1,0 +1,64 @@
+{% extends "base.html" %}{% load i18n %}
+{% block content %}
+<h1>{{ item.shelf_code }} · {{ item.title }}</h1>
+
+<div class="panel">
+  {% if item.photo %}
+    <img class="photo" src="{{ item.photo.url }}" alt="">
+  {% elif item.found_report and item.found_report.photo_file_id %}
+    <img class="photo" src="{% url 'tg_photo' item.found_report.photo_file_id %}" alt="">
+  {% endif %}
+  <table>
+    <tr><th>{% trans "Category" %}</th><td>{{ item.category.emoji }} {{ item.category }}</td></tr>
+    <tr><th>{% trans "Description" %}</th><td>{{ item.description|default:"—" }}</td></tr>
+    <tr><th>{% trans "Color" %}</th><td>{{ item.color|default:"—" }}</td></tr>
+    <tr><th>{% trans "Found at" %}</th><td>{{ item.found_location|default:"—" }}, {{ item.found_date|date:"d.m.Y" }}</td></tr>
+    <tr><th>{% trans "Received" %}</th><td>{{ item.received_at|date:"d.m.Y H:i" }} · {{ item.received_by.username }}</td></tr>
+    <tr>
+      <th>{% trans "Keep until" %}</th>
+      <td>
+        {{ item.retention_until|date:"d.m.Y" }}
+        {% if item.ready_for_disposal %}<span class="badge bad">{% trans "ready for disposal" %}</span>
+        {% elif item.expiring_soon %}<span class="badge warn">{% trans "expiring soon" %}</span>{% endif %}
+      </td>
+    </tr>
+    <tr><th>{% trans "Status" %}</th><td>{{ item.get_status_display }}</td></tr>
+  </table>
+
+  {% if item.status == "in_storage" %}
+    <a class="button primary" href="{% url 'return_item' item.pk %}">{% trans "Return to owner" %}</a>
+    <form method="post" action="{% url 'change_status' item.pk %}" class="inline">{% csrf_token %}
+      <input name="note" placeholder="{% trans 'Note' %}">
+      <button name="action" value="dispose">{% trans "Dispose" %}</button>
+      <button name="action" value="transfer">{% trans "Transfer" %}</button>
+    </form>
+  {% endif %}
+</div>
+
+<h2>{% trans "Match suggestions" %}</h2>
+<table>
+  <tr><th>{% trans "Lost report" %}</th><th>{% trans "Score" %}</th><th>{% trans "Status" %}</th></tr>
+  {% for s in suggestions %}
+  <tr>
+    <td><a href="{% url 'lost_detail' s.lost_report.pk %}">{{ s.lost_report.title }}</a></td>
+    <td>{{ s.score }}</td>
+    <td>{{ s.get_status_display }}</td>
+  </tr>
+  {% empty %}
+  <tr><td colspan="3">{% trans "No suggestions yet." %}</td></tr>
+  {% endfor %}
+</table>
+
+<h2>{% trans "Status history" %}</h2>
+<table>
+  <tr><th>{% trans "When" %}</th><th>{% trans "Change" %}</th><th>{% trans "Staff" %}</th><th>{% trans "Note" %}</th></tr>
+  {% for entry in log %}
+  <tr>
+    <td>{{ entry.timestamp|date:"d.m.Y H:i" }}</td>
+    <td>{% if entry.old_status %}{{ entry.get_old_status_display }}{% else %}—{% endif %} → {{ entry.get_new_status_display }}</td>
+    <td>{{ entry.staff.username|default:"—" }}</td>
+    <td>{{ entry.note }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

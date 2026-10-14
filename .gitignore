@@ -1,0 +1,38 @@
+# Secrets: never commit the real .env (commit .env.example only)
+.env
+.env.*
+!.env.example
+
+# Database, uploads and Telegram photo cache all live in data/
+data/
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+*.db
+
+# Collected static files
+staticfiles/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Django
+*.log
+local_settings.py
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Docker overrides
+docker-compose.override.yml

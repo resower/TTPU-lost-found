@@ -1,0 +1,13 @@
+# Keep secrets, local data and junk out of the image.
+.env
+data/
+staticfiles/
+__pycache__/
+*.pyc
+*.sqlite3*
+.git/
+.venv/
+venv/
+.idea/
+.vscode/
+docker-compose.override.yml

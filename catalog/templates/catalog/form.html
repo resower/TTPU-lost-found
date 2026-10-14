@@ -1,0 +1,10 @@
+{% extends "base.html" %}{% load i18n %}
+{% block content %}
+<h1>{{ title }}</h1>
+
+<form method="post" class="panel">{% csrf_token %}
+  {{ form.as_p }}
+  <button class="primary">{% trans "Save" %}</button>
+  <a class="button" href="{% url 'reference' %}">{% trans "Cancel" %}</a>
+</form>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "base.html" %}{% load i18n %}
+{% block content %}
+<h1>{% trans "Storage" %}</h1>
+
+<form method="get" class="panel">
+  {{ form.as_p }}
+  <button class="primary">{% trans "Filter" %}</button>
+  <a class="button" href="{% url 'export_csv' %}">{% trans "Export items in storage (CSV)" %}</a>
+</form>
+
+<table>
+  <tr>
+    <th>{% trans "Shelf" %}</th><th>{% trans "Item" %}</th><th>{% trans "Category" %}</th>
+    <th>{% trans "Received" %}</th><th>{% trans "Keep until" %}</th><th>{% trans "Status" %}</th>
+  </tr>
+  {% for item in items %}
+  <tr>
+    <td>{{ item.shelf_code }}</td>
+    <td><a href="{% url 'storage_detail' item.pk %}">{{ item.title }}</a></td>
+    <td>{{ item.category.emoji }} {{ item.category }}</td>
+    <td>{{ item.received_at|date:"d.m.Y" }}</td>
+    <td>
+      {{ item.retention_until|date:"d.m.Y" }}
+      {% if item.ready_for_disposal %}<span class="badge bad">{% trans "ready for disposal" %}</span>
+      {% elif item.expiring_soon %}<span class="badge warn">{% trans "expiring soon" %}</span>{% endif %}
+    </td>
+    <td>{{ item.get_status_display }}</td>
+  </tr>
+  {% empty %}
+  <tr><td colspan="6">{% trans "No items found." %}</td></tr>
+  {% endfor %}
+</table>
+{% endblock %}
